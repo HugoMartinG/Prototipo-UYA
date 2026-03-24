@@ -1,0 +1,56 @@
+---
+import Cabecera from '../components/Cabecera.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Reserva tu traslado">
+  <Cabecera />
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Reservar traslado</h1>
+  
+    <form class="space-y-4">
+  
+      <!-- ORIGEN -->
+      <div>
+        <label for="origen" class="block font-medium">Origen</label>
+        <input id="origen" type="text" required
+          class="w-full border p-2 rounded" />
+      </div>
+  
+      <!-- DESTINO -->
+      <div>
+        <label for="destino" class="block font-medium">Destino</label>
+        <input id="destino" type="text" required
+          class="w-full border p-2 rounded" />
+      </div>
+  
+      <!-- FECHA -->
+      <div>
+        <label for="fecha" class="block font-medium">Fecha</label>
+        <input id="fecha" type="date" required
+          class="w-full border p-2 rounded" />
+      </div>
+  
+      <!-- HORA -->
+      <div>
+        <label for="hora" class="block font-medium">Hora</label>
+        <input id="hora" type="time" required
+          class="w-full border p-2 rounded" />
+      </div>
+  
+      <!-- EMAIL -->
+      <div>
+        <label for="email" class="block font-medium">Email</label>
+        <input id="email" type="email" required
+          class="w-full border p-2 rounded" />
+      </div>
+  
+      <!-- BOTÓN -->
+      <button type="submit"
+        class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+        Confirmar reserva
+      </button>
+  
+    </form>
+  </main>
+</Layaout>
