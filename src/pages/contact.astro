@@ -1,52 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Icon from '../components/Icon.astro';
+import Layout from "../layouts/Layout.astro";
+import CabeceraContacto from "../components/CabeceraContacto.astro";
+import InfoContacto from "../components/InfoContacto.astro";
+import FormularioContacto from "../components/FormularioContacto.astro";
 ---
 
 <Layout title="Contacto">
-	<main class="max-w-5xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-12">
-		<div class="space-y-8">
-			<div>
-				<h2 class="text-4xl font-bold mb-4">Contacta con nosotros</h2>
-				<p class="text-gray-600 text-lg">¿Tienes alguna duda especial? Nuestro equipo de atención al cliente está disponible para ayudarte.</p>
-			</div>
-			
-			<div class="space-y-6">
-				<div class="flex gap-4 items-start">
-					<div class="bg-amber-100 p-3 rounded-xl text-amber-600"><Icon name="mail" size={24} /></div>
-					<div>
-						<h4 class="font-bold">Email</h4>
-						<p class="text-gray-600">soporte@tenerifetaxi.com</p>
-					</div>
-				</div>
-				<div class="flex gap-4 items-start">
-					<div class="bg-amber-100 p-3 rounded-xl text-amber-600"><Icon name="clock" size={24} /></div>
-					<div>
-						<h4 class="font-bold">Horario</h4>
-						<p class="text-gray-600">Lunes a Domingo, 24 horas</p>
-					</div>
-				</div>
-			</div>
-		</div>
+  <main class="max-w-5xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-12">
 
-		<div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl">
-			<form class="space-y-6">
-				<div class="space-y-2">
-					<label for="name" class="block font-semibold">Nombre Completo</label>
-					<input type="text" id="name" required class="w-full p-3 bg-gray-50 border rounded-xl focus-ring" />
-				</div>
-				<div class="space-y-2">
-					<label for="email" class="block font-semibold">Email</label>
-					<input type="email" id="email" required class="w-full p-3 bg-gray-50 border rounded-xl focus-ring" />
-				</div>
-				<div class="space-y-2">
-					<label for="message" class="block font-semibold">Mensaje</label>
-					<textarea id="message" rows={4} required class="w-full p-3 bg-gray-50 border rounded-xl focus-ring"></textarea>
-				</div>
-				<button type="submit" class="w-full bg-amber-500 text-white font-bold py-4 rounded-xl hover:bg-amber-600 transition-colors">
-					Enviar Mensaje
-				</button>
-			</form>
-		</div>
-	</main>
+    <div class="space-y-8">
+      <CabeceraContacto />
+      <InfoContacto />
+    </div>
+
+    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl">
+      <FormularioContacto />
+    </div>
+
+  </main>
 </Layout>
