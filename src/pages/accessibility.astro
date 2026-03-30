@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<Layout title="Accesibilidad">
+	<main class="max-w-4xl mx-auto py-12 px-4 prose prose-amber">
+		<h1 class="flex items-center gap-4"><Icon name="accessibility" class="text-amber-600" /> Informe de Accesibilidad</h1>
+		<p class="lead">Este sitio ha sido diseñado siguiendo las pautas WCAG 2.1 Nivel AA.</p>
+		
+		<div class="grid gap-8 mt-12">
+			<div class="p-6 bg-amber-50 rounded-2xl border border-amber-100">
+				<h3 class="flex items-center gap-2 mt-0 font-bold"><Icon name="check-circle" size={20} /> Estructura Semántica</h3>
+				<p>Uso de <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> y <code>&lt;footer&gt;</code> para facilitar la navegación con lectores de pantalla.</p>
+			</div>
+			<div class="p-6 bg-amber-50 rounded-2xl border border-amber-100">
+				<h3 class="flex items-center gap-2 mt-0 font-bold"><Icon name="check-circle" size={20} /> Formularios</h3>
+				<p>Cada campo tiene un <code>&lt;label&gt;</code> asociado mediante el atributo <code>for</code>, garantizando que los usuarios sepan qué información introducir.</p>
+			</div>
+			<div class="p-6 bg-amber-50 rounded-2xl border border-amber-100">
+				<h3 class="flex items-center gap-2 mt-0 font-bold"><Icon name="check-circle" size={20} /> Teclado</h3>
+				<p>Se ha implementado un estilo de <code>focus-visible</code> de alto contraste para usuarios que no utilizan ratón.</p>
+			</div>
+		</div>
+	</main>
+</Layout>
