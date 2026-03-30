@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Reservar">
+	<main class="max-w-3xl mx-auto py-12 px-4">
+		<div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+			<div class="bg-amber-500 p-8 text-white">
+				<h2 class="text-3xl font-bold">Solicitud de Reserva</h2>
+				<p class="opacity-90">Reserva tu taxi en menos de 2 minutos.</p>
+			</div>
+			<form class="p-8 space-y-6">
+				<div class="grid md:grid-cols-2 gap-6">
+					<div class="space-y-2">
+						<label for="origin" class="block font-semibold">Origen (Aeropuerto)</label>
+						<select id="origin" required class="w-full p-3 bg-gray-50 border rounded-xl focus-ring">
+							<option value="">Selecciona...</option>
+							<option>Tenerife Sur (TFS)</option>
+							<option>Tenerife Norte (TFN)</option>
+						</select>
+					</div>
+					<div class="space-y-2">
+						<label for="dest" class="block font-semibold">Destino</label>
+						<input type="text" id="dest" required placeholder="Hotel o Ciudad" class="w-full p-3 bg-gray-50 border rounded-xl focus-ring" />
+					</div>
+				</div>
+				<div class="space-y-2">
+					<label for="email" class="block font-semibold">Correo Electrónico</label>
+					<input type="email" id="email" required class="w-full p-3 bg-gray-50 border rounded-xl focus-ring" />
+				</div>
+				<button type="submit" class="w-full bg-amber-500 text-white font-bold py-4 rounded-xl hover:bg-amber-600 transition-colors">
+					Confirmar Reserva
+				</button>
+			</form>
+		</div>
+	</main>
+</Layout>
