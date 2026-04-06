@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<Layout title="Gestionar Reserva">
+	<main class="max-w-2xl mx-auto py-12 px-4">
+		<div class="text-center mb-12">
+			<h2 class="text-4xl font-bold mb-4">Gestionar Reserva</h2>
+			<p class="text-gray-600">Introduce tus datos para ver el estado de tu traslado.</p>
+		</div>
+
+		<div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl">
+			<form class="space-y-6">
+				<div class="space-y-2">
+					<label for="code" class="block font-semibold">Código de Reserva</label>
+					<input type="text" id="code" required placeholder="Ej: TF12345" class="w-full p-4 bg-gray-50 border rounded-xl focus-ring uppercase" />
+				</div>
+				<div class="space-y-2">
+					<label for="email" class="block font-semibold">Email</label>
+					<input type="email" id="email" required placeholder="usuario@ejemplo.com" class="w-full p-4 bg-gray-50 border rounded-xl focus-ring" />
+				</div>
+				<button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-black transition-colors flex items-center justify-center gap-2">
+					<Icon name="search" size={20} /> Buscar Reserva
+				</button>
+			</form>
+		</div>
+	</main>
+</Layout>

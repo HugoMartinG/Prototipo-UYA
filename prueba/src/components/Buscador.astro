@@ -1,0 +1,26 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+<section class="py-10 bg-white">
+    <form class="max-w-4xl mx-auto grid md:grid-cols-3 gap-4">
+  
+      <div>
+        <label for="origen" class="block text-sm font-medium">Origen</label>
+        <input id="origen" type="text" class="w-full border p-2 rounded" required />
+      </div>
+  
+      <div>
+        <label for="destino" class="block text-sm font-medium">Destino</label>
+        <input id="destino" type="text" class="w-full border p-2 rounded" required />
+      </div>
+  
+      <div class="flex items-end">
+        <button class="w-full bg-blue-700 text-white p-2 rounded hover:bg-blue-800">
+          Buscar
+        </button>
+      </div>
+  
+    </form>
+</section>

@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<Layout title="Inicio">
+	<main>
+		<section class="relative h-[80vh] flex items-center bg-gray-900 text-white">
+			<div class="absolute inset-0 opacity-50">
+				<img src="https://images.unsplash.com/photo-1506197603486-7c8b962285e3?auto=format&fit=crop&q=80&w=2000" alt="" class="w-full h-full object-cover" />
+			</div>
+			<div class="relative z-10 max-w-7xl mx-auto px-4">
+				<h1 class="text-5xl md:text-7xl font-bold mb-6">Tu traslado en Tenerife,<br/><span class="text-amber-500 italic">sin complicaciones.</span></h1>
+				<a href="/booking" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105">
+					Reservar Ahora <Icon name="chevron-right" size={20} />
+				</a>
+			</div>
+		</section>
+
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+				<div class="space-y-4">
+					<div class="text-amber-600"><Icon name="clock" size={40} /></div>
+					<h3 class="text-2xl font-bold">Puntualidad 24/7</h3>
+					<p class="text-gray-600">Monitoreamos tu vuelo para estar allí justo cuando aterrices.</p>
+				</div>
+				<div class="space-y-4">
+					<div class="text-amber-600"><Icon name="map-pin" size={40} /></div>
+					<h3 class="text-2xl font-bold">Toda la Isla</h3>
+					<p class="text-gray-600">Traslados a cualquier hotel o dirección en Tenerife.</p>
+				</div>
+				<div class="space-y-4">
+					<div class="text-amber-600"><Icon name="car" size={40} /></div>
+					<h3 class="text-2xl font-bold">Flota Premium</h3>
+					<p class="text-gray-600">Vehículos modernos con aire acondicionado y gran capacidad.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

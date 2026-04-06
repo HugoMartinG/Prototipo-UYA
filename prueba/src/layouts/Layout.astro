@@ -1,0 +1,51 @@
+---
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Tenerife Taxi Transfers</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body class="min-h-screen flex flex-col bg-white text-gray-900 font-sans">
+		<Navbar />
+		
+		<slot />
+
+		<footer class="bg-gray-900 text-white py-12 mt-auto">
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<p class="text-gray-400">© 2026 Tenerife Taxi Transfers. Nivel de Accesibilidad WCAG 2.1 AA.</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	@import "tailwindcss";
+
+	:root {
+		--accent: #f59e0b;
+	}
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+	}
+	h1, h2, h3 {
+		font-family: 'Playfair Display', serif;
+	}
+	.focus-ring:focus-visible {
+		outline: 3px solid var(--accent);
+		outline-offset: 2px;
+	}
+</style>
